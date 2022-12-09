@@ -34,8 +34,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.cmbModel = new System.Windows.Forms.ComboBox();
             this.lblProizv = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +58,7 @@
             this.countAutos = new System.Data.SqlClient.SqlCommand();
             this.InsertAvto = new System.Data.SqlClient.SqlCommand();
             this.commandCountPost = new System.Data.SqlClient.SqlCommand();
+            this.txtId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -120,7 +119,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.lblZagolovok);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,28 +126,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 62);
             this.panel2.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(622, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 50);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "ID:";
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(93)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtId.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtId.Location = new System.Drawing.Point(54, 11);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(36, 21);
-            this.txtId.TabIndex = 1;
             // 
             // cmbModel
             // 
@@ -387,6 +363,17 @@
             this.commandCountPost.CommandText = "SELECT DISTINCT ID_Поставки From Поставка";
             this.commandCountPost.Connection = this.MysqlConnection;
             // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtId.Location = new System.Drawing.Point(624, 0);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(93, 36);
+            this.txtId.TabIndex = 4;
+            this.txtId.Text = "id";
+            this.txtId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // DobavlenieAvto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,7 +393,6 @@
             this.Load += new System.EventHandler(this.DobavlenieAvto_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -442,12 +428,11 @@
         private System.Windows.Forms.ComboBox cmbModels;
         private System.Windows.Forms.Label label1;
         private System.Data.SqlClient.SqlCommand commandInsertModelsAfter;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtId;
         private System.Data.SqlClient.SqlCommand countAutos;
         private System.Data.SqlClient.SqlCommand InsertAvto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbPostavka;
         private System.Data.SqlClient.SqlCommand commandCountPost;
+        private System.Windows.Forms.Label txtId;
     }
 }

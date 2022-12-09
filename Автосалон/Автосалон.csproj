@@ -69,6 +69,18 @@
     <Compile Include="DobavlenieAvto.Designer.cs">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Формы на кнопках\Rezerv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\Rezerv.Designer.cs">
+      <DependentUpon>Rezerv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы на кнопках\Prodaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\Prodaji.Designer.cs">
+      <DependentUpon>Prodaji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Udalenie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="DobavlenieAvto.resx">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Формы на кнопках\Prodaji.resx">
+      <DependentUpon>Prodaji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Udalenie.resx">
       <DependentUpon>Udalenie.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +142,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Формы на кнопках\Rezerv.resx">
+      <DependentUpon>Rezerv.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AvtosalonDataSet.xsc">
       <DependentUpon>AvtosalonDataSet.xsd</DependentUpon>
     </None>

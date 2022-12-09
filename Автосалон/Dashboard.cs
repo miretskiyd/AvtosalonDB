@@ -106,6 +106,7 @@ namespace Автосалон
             pnlNav.Top = btnRezerv.Top;
             pnlNav.Left = btnRezerv.Left;
             btnRezerv.BackColor = Color.FromArgb(46, 51, 73);
+            OpenChildForm(new Rezerv());
         }
 
         private void btnProdaji_Click(object sender, EventArgs e)
@@ -114,6 +115,7 @@ namespace Автосалон
             pnlNav.Top = btnProdaji.Top;
             pnlNav.Left = btnProdaji.Left;
             btnProdaji.BackColor = Color.FromArgb(46, 51, 73);
+            OpenChildForm(new Prodaji());
         }
         private void pnlUprOnlyDirec()
         {
