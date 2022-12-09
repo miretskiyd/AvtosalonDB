@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98E36E1A-4842-4C71-A8BA-2E1A16F847B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Автосалон</RootNamespace>
+    <AssemblyName>Автосалон</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AvtosalonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtosalonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePoID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePoID.Designer.cs">
+      <DependentUpon>ChangePoID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DobavlenieAvto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DobavlenieAvto.Designer.cs">
+      <DependentUpon>DobavlenieAvto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Udalenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Udalenie.Designer.cs">
+      <DependentUpon>Udalenie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersData.cs" />
+    <Compile Include="Формы на кнопках\Autos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\Autos.Designer.cs">
+      <DependentUpon>Autos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы на кнопках\PanelUpravlenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\PanelUpravlenia.Designer.cs">
+      <DependentUpon>PanelUpravlenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePoID.resx">
+      <DependentUpon>ChangePoID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DobavlenieAvto.resx">
+      <DependentUpon>DobavlenieAvto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Udalenie.resx">
+      <DependentUpon>Udalenie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы на кнопках\Autos.resx">
+      <DependentUpon>Autos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы на кнопках\PanelUpravlenia.resx">
+      <DependentUpon>PanelUpravlenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AvtosalonDataSet.xsc">
+      <DependentUpon>AvtosalonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AvtosalonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AvtosalonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AvtosalonDataSet.xss">
+      <DependentUpon>AvtosalonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tesla-model-x-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пользователь.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пароль.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-веб-аналитика-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-веб-аналитика-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-пробка-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-доставка-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-продажа-машины-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-выход-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-бизнесмен-100.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
