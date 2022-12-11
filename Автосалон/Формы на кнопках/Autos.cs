@@ -76,6 +76,11 @@ namespace Автосалон
                 temp.Load(mysqlcomOnlyKuzov.ExecuteReader());
                 dataAutos.DataSource = temp;
             }
+            else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text == "")
+            {
+                temp.Load(MysqlCommand.ExecuteReader());
+                dataAutos.DataSource = temp;
+            }
                 MysqlConnection.Close();
         }
 

@@ -20,21 +20,20 @@ namespace Автосалон
         }
 
         private void PanelUpravlenia_Load(object sender, EventArgs e)
-        {// TODO: данная строка кода позволяет загрузить данные в таблицу "avtosalonDataSet.Сотрудник". При необходимости она может быть перемещена или удалена.
+        {
             
-            this.сотрудникTableAdapter.Fill(this.avtosalonDataSet.Сотрудник);
+
             ShowOnlyManagers();
         }
         private void ShowOnlyManagers()
         {
-            try
+            MySqlConnection.Open();
+            SqlDataReader qwe = InsertManagers.ExecuteReader();
+            while (qwe.Read())
             {
-                this.сотрудникTableAdapter.FillBy(this.avtosalonDataSet.Сотрудник);
+                cmbboxSotr.Items.Add(qwe.GetValue(0).ToString());
             }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            MySqlConnection.Close();
         }
 
         private void btnShowsotr_Click(object sender, EventArgs e)
