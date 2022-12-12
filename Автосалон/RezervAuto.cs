@@ -36,6 +36,8 @@ namespace Автосалон
         private void RezervAuto_Load(object sender, EventArgs e)
         {
             lbl_id.Text = usersData.id_cell;
+            ID_sotr.Parameters["@userlogin"].Value = usersData.User_Surname;
+            RezervCom.Parameters["@id_auto"].Value = Convert.ToInt32(lbl_id.Text);
         }
 
         private void btnRezerv_Click(object sender, EventArgs e)
@@ -45,8 +47,19 @@ namespace Автосалон
         private void RezervirovanieAutoF()
         {
             MysqlConnection.Open();
-            string NomerProd = ID_rez.ExecuteScalar().ToString();
+            string NomerRezerv = ID_rez.ExecuteScalar().ToString();
+            string IDSotr = ID_sotr.ExecuteScalar().ToString();
+            NomerRezerv = ID_rez.ExecuteScalar().ToString();
+            IDSotr = ID_sotr.ExecuteScalar().ToString();
+            RezervCom.Parameters["@id_rezerv"].Value = NomerRezerv;
+            RezervCom.Parameters["@id_sotr"].Value = IDSotr;
+            RezervCom.Parameters["@fio_pok"].Value = txtFIOPokup.Text;
+            RezervCom.Parameters["@dateNowRez"].Value = DateTime.Now;
+            RezervCom.Parameters["@dateDoRez"].Value = dateRezerv.Value;
+            RezervCom.ExecuteNonQuery();
             MysqlConnection.Close();
-        }
+            MessageBox.Show("Вы зарезервировали автомобиль");
+            this.Close();
+        }   
     }
 }

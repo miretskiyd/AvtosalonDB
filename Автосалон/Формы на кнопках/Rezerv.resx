@@ -117,4 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="MysqlConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="RezerTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 17</value>
+  </metadata>
+  <data name="RezerTable.CommandText" xml:space="preserve">
+    <value>select ID_Резервирования AS ID, Сотрудник.Фамилия, CONCAT(Производитель,' ',НаименованиеМодели) AS Автомобиль, ФИО_Покупателя, ДатаРезервирования, РезервированиеДоДаты from Резервирование JOIN Сотрудник ON Резервирование.ID_Сотрудника = Сотрудник.ID_Сотрудника JOIN Автомобиль ON Резервирование.ID_Автомобиля = Автомобиль.ID_Автомобиля JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели</value>
+  </data>
+  <metadata name="FiltrProizv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>310, 17</value>
+  </metadata>
+  <metadata name="InsertProizv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>401, 16</value>
+  </metadata>
+  <metadata name="InsertSotr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>537, 16</value>
+  </metadata>
+  <metadata name="FiltrSotr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>659, 16</value>
+  </metadata>
+  <metadata name="FiltrSotrProizv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>769, 16</value>
+  </metadata>
 </root>
