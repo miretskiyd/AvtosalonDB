@@ -69,6 +69,24 @@
     <Compile Include="DobavlenieAvto.Designer.cs">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdajaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdajaAuto.Designer.cs">
+      <DependentUpon>ProdajaAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervAuto.Designer.cs">
+      <DependentUpon>RezervAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UdalProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UdalProd.Designer.cs">
+      <DependentUpon>UdalProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Формы на кнопках\Rezerv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DobavlenieAvto.resx">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdajaAuto.resx">
+      <DependentUpon>ProdajaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervAuto.resx">
+      <DependentUpon>RezervAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UdalProd.resx">
+      <DependentUpon>UdalProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Формы на кнопках\Prodaji.resx">
       <DependentUpon>Prodaji.cs</DependentUpon>

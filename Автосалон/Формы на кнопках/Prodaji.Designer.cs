@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prodaji));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTsena = new System.Windows.Forms.TextBox();
@@ -41,7 +41,6 @@
             this.cmbBoxListProizv = new System.Windows.Forms.ComboBox();
             this.lblKuzov = new System.Windows.Forms.Label();
             this.lvlMarka = new System.Windows.Forms.Label();
-            this.btnDobavlenie = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUdalit = new System.Windows.Forms.Button();
             this.btnIzmenit = new System.Windows.Forms.Button();
@@ -53,6 +52,7 @@
             this.FiltrProizv = new System.Data.SqlClient.SqlCommand();
             this.FiltrTsena = new System.Data.SqlClient.SqlCommand();
             this.FiltrTsenaProizv = new System.Data.SqlClient.SqlCommand();
+            this.NalichieCom = new System.Data.SqlClient.SqlCommand();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProdaji)).BeginInit();
@@ -79,7 +79,6 @@
             this.panel1.Controls.Add(this.cmbBoxListProizv);
             this.panel1.Controls.Add(this.lblKuzov);
             this.panel1.Controls.Add(this.lvlMarka);
-            this.panel1.Controls.Add(this.btnDobavlenie);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnUdalit);
             this.panel1.Controls.Add(this.btnIzmenit);
@@ -114,7 +113,7 @@
             this.btnExecute.FlatAppearance.BorderSize = 0;
             this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExecute.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExecute.Location = new System.Drawing.Point(367, 101);
+            this.btnExecute.Location = new System.Drawing.Point(359, 102);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(97, 29);
             this.btnExecute.TabIndex = 16;
@@ -152,19 +151,6 @@
             this.lvlMarka.TabIndex = 15;
             this.lvlMarka.Text = "Производитель:";
             // 
-            // btnDobavlenie
-            // 
-            this.btnDobavlenie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            this.btnDobavlenie.FlatAppearance.BorderSize = 0;
-            this.btnDobavlenie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDobavlenie.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDobavlenie.Location = new System.Drawing.Point(674, 101);
-            this.btnDobavlenie.Name = "btnDobavlenie";
-            this.btnDobavlenie.Size = new System.Drawing.Size(99, 23);
-            this.btnDobavlenie.TabIndex = 12;
-            this.btnDobavlenie.Text = "Добавить";
-            this.btnDobavlenie.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
@@ -182,12 +168,13 @@
             this.btnUdalit.FlatAppearance.BorderSize = 0;
             this.btnUdalit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUdalit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUdalit.Location = new System.Drawing.Point(884, 101);
+            this.btnUdalit.Location = new System.Drawing.Point(791, 101);
             this.btnUdalit.Name = "btnUdalit";
             this.btnUdalit.Size = new System.Drawing.Size(99, 23);
             this.btnUdalit.TabIndex = 13;
             this.btnUdalit.Text = "Удалить";
             this.btnUdalit.UseVisualStyleBackColor = false;
+            this.btnUdalit.Click += new System.EventHandler(this.btnUdalit_Click);
             // 
             // btnIzmenit
             // 
@@ -195,7 +182,7 @@
             this.btnIzmenit.FlatAppearance.BorderSize = 0;
             this.btnIzmenit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzmenit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIzmenit.Location = new System.Drawing.Point(779, 101);
+            this.btnIzmenit.Location = new System.Drawing.Point(686, 101);
             this.btnIzmenit.Name = "btnIzmenit";
             this.btnIzmenit.Size = new System.Drawing.Size(99, 23);
             this.btnIzmenit.TabIndex = 14;
@@ -226,42 +213,42 @@
             // 
             this.dataProdaji.AllowUserToAddRows = false;
             this.dataProdaji.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            this.dataProdaji.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            this.dataProdaji.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataProdaji.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataProdaji.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
             this.dataProdaji.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataProdaji.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataProdaji.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataProdaji.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataProdaji.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataProdaji.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataProdaji.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataProdaji.Location = new System.Drawing.Point(0, 0);
             this.dataProdaji.Name = "dataProdaji";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataProdaji.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataProdaji.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataProdaji.RowHeadersWidth = 51;
             this.dataProdaji.RowTemplate.Height = 24;
             this.dataProdaji.Size = new System.Drawing.Size(1029, 388);
@@ -323,7 +310,6 @@
         private System.Data.SqlClient.SqlConnection MysqlConnection;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataProdaji;
-        private System.Windows.Forms.Button btnDobavlenie;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUdalit;
         private System.Windows.Forms.Button btnIzmenit;
@@ -337,5 +323,6 @@
         private System.Data.SqlClient.SqlCommand FiltrProizv;
         private System.Data.SqlClient.SqlCommand FiltrTsena;
         private System.Data.SqlClient.SqlCommand FiltrTsenaProizv;
+        private System.Data.SqlClient.SqlCommand NalichieCom;
     }
 }

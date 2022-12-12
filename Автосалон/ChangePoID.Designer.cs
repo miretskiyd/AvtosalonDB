@@ -115,9 +115,9 @@
             // 
             this.lbl_id.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbl_id.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_id.Location = new System.Drawing.Point(681, 33);
+            this.lbl_id.Location = new System.Drawing.Point(679, 35);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(93, 40);
+            this.lbl_id.Size = new System.Drawing.Size(93, 37);
             this.lbl_id.TabIndex = 3;
             this.lbl_id.Text = "id";
             this.lbl_id.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

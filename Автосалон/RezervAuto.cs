@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -12,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Автосалон
 {
-    public partial class Udalenie : Form
+    public partial class RezervAuto : Form
     {
-        public Udalenie()
+        public RezervAuto()
         {
             InitializeComponent();
         }
@@ -29,23 +28,25 @@ namespace Автосалон
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        public void btnYes_Click(object sender, EventArgs e)
-        {
-            DeletingAutos.Parameters["@id_auto"].Value = Convert.ToInt32(usersData.id_cell);
-            MysqlConnection.Open();
-            DeletingAutos.ExecuteNonQuery();
-            MysqlConnection.Close();
-            this.Close();
-        }
-
-        public void btnNo_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void RezervAuto_Load(object sender, EventArgs e)
+        {
+            lbl_id.Text = usersData.id_cell;
+        }
+
+        private void btnRezerv_Click(object sender, EventArgs e)
+        {
+            RezervirovanieAutoF();
+        }
+        private void RezervirovanieAutoF()
+        {
+            MysqlConnection.Open();
+            string NomerProd = ID_rez.ExecuteScalar().ToString();
+            MysqlConnection.Close();
         }
     }
 }

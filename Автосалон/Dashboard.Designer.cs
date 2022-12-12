@@ -32,26 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnExitAcc = new System.Windows.Forms.Button();
+            this.btnProdaji = new System.Windows.Forms.Button();
+            this.btnRezerv = new System.Windows.Forms.Button();
+            this.btnAutos = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDolzh = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlWorkspace = new System.Windows.Forms.Panel();
             this.timerDash = new System.Windows.Forms.Timer(this.components);
             this.MysqlConnection = new System.Data.SqlClient.SqlConnection();
             this.MysqlCommand = new System.Data.SqlClient.SqlCommand();
             this.MsqlCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.btnExitAcc = new System.Windows.Forms.Button();
-            this.btnProdaji = new System.Windows.Forms.Button();
-            this.btnRezerv = new System.Windows.Forms.Button();
-            this.btnAutos = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,6 +88,16 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pnlIconteslatopleft
+            // 
+            this.pnlIconteslatopleft.BackgroundImage = global::Автосалон.Properties.Resources.icons8_tesla_model_x_100;
+            this.pnlIconteslatopleft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlIconteslatopleft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlIconteslatopleft.Location = new System.Drawing.Point(0, 0);
+            this.pnlIconteslatopleft.Name = "pnlIconteslatopleft";
+            this.pnlIconteslatopleft.Size = new System.Drawing.Size(30, 35);
+            this.pnlIconteslatopleft.TabIndex = 1;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
@@ -111,105 +121,6 @@
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.lblTime);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(239, 100);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblDolzh);
-            this.panel4.Controls.Add(this.lblSurname);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(107, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(132, 100);
-            this.panel4.TabIndex = 5;
-            // 
-            // lblDolzh
-            // 
-            this.lblDolzh.AutoEllipsis = true;
-            this.lblDolzh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblDolzh.Font = new System.Drawing.Font("Montserrat Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDolzh.Location = new System.Drawing.Point(0, 63);
-            this.lblDolzh.Name = "lblDolzh";
-            this.lblDolzh.Size = new System.Drawing.Size(132, 37);
-            this.lblDolzh.TabIndex = 4;
-            this.lblDolzh.Text = "label2";
-            this.lblDolzh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSurname.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSurname.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblSurname.Location = new System.Drawing.Point(0, 0);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(132, 77);
-            this.lblSurname.TabIndex = 4;
-            this.lblSurname.Text = "label2";
-            this.lblSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTime.Location = new System.Drawing.Point(12, 72);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(66, 25);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "label2";
-            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(103, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 21);
-            this.label1.TabIndex = 2;
-            // 
-            // pnlWorkspace
-            // 
-            this.pnlWorkspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
-            this.pnlWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlWorkspace.Location = new System.Drawing.Point(239, 35);
-            this.pnlWorkspace.Name = "pnlWorkspace";
-            this.pnlWorkspace.Size = new System.Drawing.Size(888, 618);
-            this.pnlWorkspace.TabIndex = 2;
-            // 
-            // timerDash
-            // 
-            this.timerDash.Tick += new System.EventHandler(this.timerDash_Tick);
-            // 
-            // MysqlConnection
-            // 
-            this.MysqlConnection.ConnectionString = "Data Source=LAPTOP-6VLIU4NF\\SQLEXPRESS;Initial Catalog=Avtosalon;Integrated Secur" +
-    "ity=True";
-            this.MysqlConnection.FireInfoMessageEventOnUserErrors = false;
-            // 
-            // MysqlCommand
-            // 
-            this.MysqlCommand.CommandText = "SELECT dbo.ReturningSurname(@userlogin)";
-            this.MysqlCommand.Connection = this.MysqlConnection;
-            this.MysqlCommand.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@userlogin", System.Data.SqlDbType.VarChar, 50)});
-            // 
-            // MsqlCommand2
-            // 
-            this.MsqlCommand2.CommandText = "SELECT dbo.ReturningDolzh(@userlogin)";
-            this.MsqlCommand2.Connection = this.MysqlConnection;
-            this.MsqlCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@userlogin", System.Data.SqlDbType.VarChar, 1024)});
             // 
             // btnExitAcc
             // 
@@ -306,6 +217,72 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.lblTime);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(239, 100);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblDolzh);
+            this.panel4.Controls.Add(this.lblSurname);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(107, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(132, 100);
+            this.panel4.TabIndex = 5;
+            // 
+            // lblDolzh
+            // 
+            this.lblDolzh.AutoEllipsis = true;
+            this.lblDolzh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblDolzh.Font = new System.Drawing.Font("Montserrat Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDolzh.Location = new System.Drawing.Point(0, 63);
+            this.lblDolzh.Name = "lblDolzh";
+            this.lblDolzh.Size = new System.Drawing.Size(132, 37);
+            this.lblDolzh.TabIndex = 4;
+            this.lblDolzh.Text = "label2";
+            this.lblDolzh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSurname.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSurname.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblSurname.Location = new System.Drawing.Point(0, 0);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(132, 77);
+            this.lblSurname.TabIndex = 4;
+            this.lblSurname.Text = "label2";
+            this.lblSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTime.Location = new System.Drawing.Point(12, 72);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(66, 25);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "label2";
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(103, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Автосалон.Properties.Resources.icons8_бизнесмен_100;
@@ -316,15 +293,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlIconteslatopleft
+            // pnlWorkspace
             // 
-            this.pnlIconteslatopleft.BackgroundImage = global::Автосалон.Properties.Resources.icons8_tesla_model_x_100;
-            this.pnlIconteslatopleft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlIconteslatopleft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlIconteslatopleft.Location = new System.Drawing.Point(0, 0);
-            this.pnlIconteslatopleft.Name = "pnlIconteslatopleft";
-            this.pnlIconteslatopleft.Size = new System.Drawing.Size(30, 35);
-            this.pnlIconteslatopleft.TabIndex = 1;
+            this.pnlWorkspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
+            this.pnlWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlWorkspace.Location = new System.Drawing.Point(239, 35);
+            this.pnlWorkspace.Name = "pnlWorkspace";
+            this.pnlWorkspace.Size = new System.Drawing.Size(888, 618);
+            this.pnlWorkspace.TabIndex = 2;
+            // 
+            // timerDash
+            // 
+            this.timerDash.Tick += new System.EventHandler(this.timerDash_Tick);
+            // 
+            // MysqlConnection
+            // 
+            this.MysqlConnection.ConnectionString = "Data Source=LAPTOP-6VLIU4NF\\SQLEXPRESS;Initial Catalog=Avtosalon;Integrated Secur" +
+    "ity=True";
+            this.MysqlConnection.FireInfoMessageEventOnUserErrors = false;
+            // 
+            // MysqlCommand
+            // 
+            this.MysqlCommand.CommandText = "SELECT dbo.ReturningSurname(@userlogin)";
+            this.MysqlCommand.Connection = this.MysqlConnection;
+            this.MysqlCommand.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@userlogin", System.Data.SqlDbType.VarChar, 50)});
+            // 
+            // MsqlCommand2
+            // 
+            this.MsqlCommand2.CommandText = "SELECT dbo.ReturningDolzh(@userlogin)";
+            this.MsqlCommand2.Connection = this.MysqlConnection;
+            this.MsqlCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@userlogin", System.Data.SqlDbType.VarChar, 1024)});
             // 
             // Dashboard
             // 

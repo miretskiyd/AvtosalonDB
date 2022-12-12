@@ -113,6 +113,16 @@ namespace Автосалон
             frm.Show();
         }
 
-      
+        private void btnProdaja_Click(object sender, EventArgs e)
+        {
+            Form frm = new ProdajaAuto();
+            frm.Show();
+        }
+
+        private void btnRezerv_Click(object sender, EventArgs e)
+        {
+            Form frm = new RezervAuto();
+            frm.Show();
+        }
     }
 }
