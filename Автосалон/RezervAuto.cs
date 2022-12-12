@@ -36,6 +36,8 @@ namespace Автосалон
         private void RezervAuto_Load(object sender, EventArgs e)
         {
             lbl_id.Text = usersData.id_cell;
+            DateTime dateRez = DateTime.Now.AddMonths(1);
+            dateRezerv.Value = dateRez;
             ID_sotr.Parameters["@userlogin"].Value = usersData.User_Surname;
             RezervCom.Parameters["@id_auto"].Value = Convert.ToInt32(lbl_id.Text);
         }
