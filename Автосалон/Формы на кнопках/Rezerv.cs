@@ -74,5 +74,9 @@ namespace Автосалон
             }
                 MysqlConnection.Close();
         }
+        private void btnUdalit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

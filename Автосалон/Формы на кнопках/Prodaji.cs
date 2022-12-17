@@ -68,10 +68,7 @@ namespace Автосалон
             MysqlConnection.Close();
         }
 
-        private void btnDobavlenie_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void btnUdalit_Click(object sender, EventArgs e)
         {
@@ -79,5 +76,7 @@ namespace Автосалон
             udal.Show();
 
         }
+
+      
     }
 }

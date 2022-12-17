@@ -122,6 +122,7 @@ namespace Автосалон
         private void btnDobavit_Click(object sender, EventArgs e)
         {
             DobavlenieAuto();
+            this.Close();
             
         }
 

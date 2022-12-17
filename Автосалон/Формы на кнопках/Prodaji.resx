@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="PoslednieProdaji.CommandText" xml:space="preserve">
-    <value>Select ID_Продажи AS ID, CONCAT(Производитель,' ',НаименованиеМодели) AS Автомобиль,Фамилия AS ФамилияСотрудника, ФИО_Покупателя, Дата, Сумма FROM Автомобиль JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели JOIN Продажа ON Автомобиль.ID_Автомобиля = Продажа.ID_Автомобиля JOIN Сотрудник ON Продажа.ID_Сотрудника = Сотрудник.ID_Сотрудника</value>
+    <value>Select ID_Продажи AS ID, CONCAT(Производитель,' ',НаименованиеМодели) AS Автомобиль,Фамилия AS ФамилияСотрудника, ФИО_Покупателя, Дата, Сумма FROM Автомобиль JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели JOIN Продажа ON Автомобиль.ID_Автомобиля = Продажа.ID_Автомобиля JOIN Сотрудник ON Продажа.ID_Сотрудника = Сотрудник.ID_Сотрудника ORDER BY ID DESC</value>
   </data>
   <metadata name="MysqlConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>

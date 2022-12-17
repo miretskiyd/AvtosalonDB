@@ -124,7 +124,7 @@
     <value>179, 17</value>
   </metadata>
   <data name="RezerTable.CommandText" xml:space="preserve">
-    <value>select ID_Резервирования AS ID, Сотрудник.Фамилия, CONCAT(Производитель,' ',НаименованиеМодели) AS Автомобиль, ФИО_Покупателя, ДатаРезервирования, РезервированиеДоДаты from Резервирование JOIN Сотрудник ON Резервирование.ID_Сотрудника = Сотрудник.ID_Сотрудника JOIN Автомобиль ON Резервирование.ID_Автомобиля = Автомобиль.ID_Автомобиля JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели</value>
+    <value>select ID_Резервирования AS ID, Сотрудник.Фамилия, CONCAT(Производитель,' ',НаименованиеМодели) AS Автомобиль, ФИО_Покупателя, ДатаРезервирования, РезервированиеДоДаты from Резервирование JOIN Сотрудник ON Резервирование.ID_Сотрудника = Сотрудник.ID_Сотрудника JOIN Автомобиль ON Резервирование.ID_Автомобиля = Автомобиль.ID_Автомобиля JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели ORDER BY ID DESC</value>
   </data>
   <metadata name="FiltrProizv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>310, 17</value>

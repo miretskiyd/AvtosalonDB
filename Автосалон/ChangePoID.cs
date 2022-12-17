@@ -79,6 +79,7 @@ namespace Автосалон
             ChangeAutoInfo.ExecuteNonQuery();
             MysqlConnection.Close();
             MessageBox.Show("Вы изменили данные автомобиля");
+            this.Close();
         }
     }
 }
