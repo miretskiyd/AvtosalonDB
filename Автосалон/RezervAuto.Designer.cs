@@ -153,7 +153,7 @@
             this.btnRezerv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRezerv.Location = new System.Drawing.Point(338, 341);
             this.btnRezerv.Name = "btnRezerv";
-            this.btnRezerv.Size = new System.Drawing.Size(194, 38);
+            this.btnRezerv.Size = new System.Drawing.Size(208, 38);
             this.btnRezerv.TabIndex = 10;
             this.btnRezerv.Text = "Зарезервировать";
             this.btnRezerv.UseVisualStyleBackColor = false;

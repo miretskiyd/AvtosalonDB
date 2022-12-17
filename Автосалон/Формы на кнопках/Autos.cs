@@ -59,29 +59,60 @@ namespace Автосалон
             mysqlcomOnlyMark.Parameters["@marka"].Value = cmbBoxListMarks.Text;
             MysqlCommand2.Parameters["@kuzov"].Value = cmboxListKuzov.Text;
             mysqlcomOnlyKuzov.Parameters["@kuzov"].Value = cmboxListKuzov.Text;
+            NMarkKuz.Parameters["@marka"].Value = cmbBoxListMarks.Text;
+            NMarkKuz.Parameters["@kuzov"].Value = cmboxListKuzov.Text;
+            NKuz.Parameters["@kuzov"].Value = cmboxListKuzov.Text;
+            NMark.Parameters["@marka"].Value = cmbBoxListMarks.Text;
             MysqlConnection.Open();           
             var temp = new DataTable();
-            if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text != "")
+            if (checkNalich.Checked == false)
             {
-                temp.Load(MysqlCommand2.ExecuteReader());
-                dataAutos.DataSource = temp;
+                if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text != "")
+                {
+                    temp.Load(MysqlCommand2.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text == "")
+                {
+                    temp.Load(mysqlcomOnlyMark.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text != "")
+                {
+                    temp.Load(mysqlcomOnlyKuzov.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text == "")
+                {
+                    temp.Load(MysqlCommand.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
             }
-            else if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text == "")
+            if (checkNalich.Checked == true)
             {
-                temp.Load(mysqlcomOnlyMark.ExecuteReader());
-                dataAutos.DataSource = temp;
+                if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text != "")
+                {
+                    temp.Load(NMarkKuz.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text != "" && cmboxListKuzov.Text == "")
+                {
+                    temp.Load(NMark.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text != "")
+                {
+                    temp.Load(NKuz.ExecuteReader());
+                    dataAutos.DataSource = temp;
+                }
+                else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text == "")
+                {
+                    temp.Load(NAutos.ExecuteReader());
+                    dataAutos.DataSource = temp;
+
+                }
             }
-            else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text != "")
-            {
-                temp.Load(mysqlcomOnlyKuzov.ExecuteReader());
-                dataAutos.DataSource = temp;
-            }
-            else if (cmbBoxListMarks.Text == "" && cmboxListKuzov.Text == "")
-            {
-                temp.Load(MysqlCommand.ExecuteReader());
-                dataAutos.DataSource = temp;
-            }
-                MysqlConnection.Close();
+            MysqlConnection.Close();
         }
 
         private void cmboxListKuzov_SelectedIndexChanged(object sender, EventArgs e)

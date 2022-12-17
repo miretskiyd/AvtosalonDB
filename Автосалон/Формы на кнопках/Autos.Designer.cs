@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Autos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lvlMarka = new System.Windows.Forms.Label();
             this.btnExecute = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,9 @@
             this.mysqlcomOnlyMark = new System.Data.SqlClient.SqlCommand();
             this.mysqlcomOnlyKuzov = new System.Data.SqlClient.SqlCommand();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkNalich = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRezerv = new System.Windows.Forms.Button();
             this.btnProdaja = new System.Windows.Forms.Button();
             this.btnDobavlenie = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +59,10 @@
             this.btnIzmenit = new System.Windows.Forms.Button();
             this.lblZagolovok = new System.Windows.Forms.Label();
             this.DeletingCommand = new System.Data.SqlClient.SqlCommand();
-            this.btnRezerv = new System.Windows.Forms.Button();
+            this.NMarkKuz = new System.Data.SqlClient.SqlCommand();
+            this.NKuz = new System.Data.SqlClient.SqlCommand();
+            this.NMark = new System.Data.SqlClient.SqlCommand();
+            this.NAutos = new System.Data.SqlClient.SqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.dataAutos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,45 +130,45 @@
             // 
             this.dataAutos.AllowUserToAddRows = false;
             this.dataAutos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            this.dataAutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            this.dataAutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataAutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataAutos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
             this.dataAutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataAutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataAutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataAutos.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataAutos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataAutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAutos.Location = new System.Drawing.Point(0, 0);
             this.dataAutos.Name = "dataAutos";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataAutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataAutos.RowHeadersWidth = 51;
             this.dataAutos.RowTemplate.Height = 24;
-            this.dataAutos.Size = new System.Drawing.Size(800, 350);
+            this.dataAutos.Size = new System.Drawing.Size(872, 368);
             this.dataAutos.TabIndex = 0;
             this.dataAutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAutos_CellClick);
             // 
@@ -173,7 +178,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 350);
+            this.panel1.Size = new System.Drawing.Size(872, 368);
             this.panel1.TabIndex = 5;
             // 
             // cmbBoxListMarks
@@ -227,6 +232,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkNalich);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.lblZagolovok);
             this.panel2.Controls.Add(this.btnExecute);
@@ -237,8 +243,20 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 100);
+            this.panel2.Size = new System.Drawing.Size(872, 100);
             this.panel2.TabIndex = 9;
+            // 
+            // checkNalich
+            // 
+            this.checkNalich.AutoSize = true;
+            this.checkNalich.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkNalich.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkNalich.Location = new System.Drawing.Point(387, 24);
+            this.checkNalich.Name = "checkNalich";
+            this.checkNalich.Size = new System.Drawing.Size(150, 22);
+            this.checkNalich.TabIndex = 12;
+            this.checkNalich.Text = "Только в наличии";
+            this.checkNalich.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -249,10 +267,25 @@
             this.panel3.Controls.Add(this.btnUdalit);
             this.panel3.Controls.Add(this.btnIzmenit);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(409, 0);
+            this.panel3.Location = new System.Drawing.Point(481, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(391, 100);
             this.panel3.TabIndex = 11;
+            // 
+            // btnRezerv
+            // 
+            this.btnRezerv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
+            this.btnRezerv.FlatAppearance.BorderSize = 0;
+            this.btnRezerv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRezerv.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRezerv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRezerv.Location = new System.Drawing.Point(18, 71);
+            this.btnRezerv.Name = "btnRezerv";
+            this.btnRezerv.Size = new System.Drawing.Size(99, 23);
+            this.btnRezerv.TabIndex = 10;
+            this.btnRezerv.Text = "Резерв";
+            this.btnRezerv.UseVisualStyleBackColor = false;
+            this.btnRezerv.Click += new System.EventHandler(this.btnRezerv_Click);
             // 
             // btnProdaja
             // 
@@ -341,27 +374,39 @@
             new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
             new System.Data.SqlClient.SqlParameter("@id_auto", System.Data.SqlDbType.Int, 4)});
             // 
-            // btnRezerv
+            // NMarkKuz
             // 
-            this.btnRezerv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(113)))));
-            this.btnRezerv.FlatAppearance.BorderSize = 0;
-            this.btnRezerv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRezerv.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRezerv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRezerv.Location = new System.Drawing.Point(18, 71);
-            this.btnRezerv.Name = "btnRezerv";
-            this.btnRezerv.Size = new System.Drawing.Size(99, 23);
-            this.btnRezerv.TabIndex = 10;
-            this.btnRezerv.Text = "Резерв";
-            this.btnRezerv.UseVisualStyleBackColor = false;
-            this.btnRezerv.Click += new System.EventHandler(this.btnRezerv_Click);
+            this.NMarkKuz.CommandText = "SELECT * FROM dbo.АвтомобилиФормаВналичии(@marka, @kuzov)";
+            this.NMarkKuz.Connection = this.MysqlConnection;
+            this.NMarkKuz.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@marka", System.Data.SqlDbType.VarChar, 1024),
+            new System.Data.SqlClient.SqlParameter("@kuzov", System.Data.SqlDbType.VarChar, 1024)});
+            // 
+            // NKuz
+            // 
+            this.NKuz.CommandText = "SELECT * FROM dbo.АвтомобилиФормаКузовВналичии(@kuzov)";
+            this.NKuz.Connection = this.MysqlConnection;
+            this.NKuz.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@kuzov", System.Data.SqlDbType.VarChar, 1024)});
+            // 
+            // NMark
+            // 
+            this.NMark.CommandText = "SELECT * FROM dbo.АвтомобилиФормаМаркаВналичии(@marka)";
+            this.NMark.Connection = this.MysqlConnection;
+            this.NMark.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@marka", System.Data.SqlDbType.VarChar, 1024)});
+            // 
+            // NAutos
+            // 
+            this.NAutos.CommandText = resources.GetString("NAutos.CommandText");
+            this.NAutos.Connection = this.MysqlConnection;
             // 
             // Autos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(872, 468);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -404,5 +449,10 @@
         private System.Data.SqlClient.SqlCommand DeletingCommand;
         private System.Windows.Forms.Button btnProdaja;
         private System.Windows.Forms.Button btnRezerv;
+        private System.Windows.Forms.CheckBox checkNalich;
+        private System.Data.SqlClient.SqlCommand NMarkKuz;
+        private System.Data.SqlClient.SqlCommand NKuz;
+        private System.Data.SqlClient.SqlCommand NMark;
+        private System.Data.SqlClient.SqlCommand NAutos;
     }
 }
