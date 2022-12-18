@@ -76,7 +76,13 @@ namespace Автосалон
         }
         private void btnUdalit_Click(object sender, EventArgs e)
         {
+            Form Rezv = new RezUd();
+            Rezv.Show();
+        }
 
+        private void dataRezerv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            usersData.id_cell = dataRezerv.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

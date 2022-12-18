@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Автосалон
 {
-    public partial class UdalProd : Form
+    public partial class RezUd : Form
     {
-        public UdalProd()
+        public RezUd()
         {
             InitializeComponent();
         }
@@ -21,39 +21,28 @@ namespace Автосалон
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnNo_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            comUdalProd.Parameters["@id_auto"].Value = Convert.ToInt32(usersData.id_cell);
+            RezUdCom.Parameters["@id_auto"].Value = Convert.ToInt32(usersData.id_cell);
             MysqlConnection.Open();
-            comUdalProd.ExecuteNonQuery();
+            RezUdCom.ExecuteNonQuery();
             MysqlConnection.Close();
             this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

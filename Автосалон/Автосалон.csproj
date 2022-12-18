@@ -69,6 +69,12 @@
     <Compile Include="DobavlenieAvto.Designer.cs">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Формы на кнопках\Postavki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\Postavki.Designer.cs">
+      <DependentUpon>Postavki.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProdajaAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="RezervAuto.Designer.cs">
       <DependentUpon>RezervAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezUd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezUd.Designer.cs">
+      <DependentUpon>RezUd.cs</DependentUpon>
     </Compile>
     <Compile Include="UdalProd.cs">
       <SubType>Form</SubType>
@@ -141,8 +153,14 @@
     <EmbeddedResource Include="RezervAuto.resx">
       <DependentUpon>RezervAuto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RezUd.resx">
+      <DependentUpon>RezUd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UdalProd.resx">
       <DependentUpon>UdalProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы на кнопках\Postavki.resx">
+      <DependentUpon>Postavki.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Формы на кнопках\Prodaji.resx">
       <DependentUpon>Prodaji.cs</DependentUpon>
@@ -226,6 +244,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-бизнесмен-100.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-фура-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

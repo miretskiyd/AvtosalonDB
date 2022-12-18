@@ -139,5 +139,14 @@ namespace Автосалон
         {
 
         }
+
+        private void btnPostavki_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnPostavki.Height;
+            pnlNav.Top = btnPostavki.Top;
+            pnlNav.Left = btnPostavki.Left;
+            btnPostavki.BackColor = Color.FromArgb(46, 51, 73);
+            OpenChildForm(new Postavki());
+        }
     }
 }

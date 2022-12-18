@@ -129,13 +129,13 @@ namespace Автосалон
         private void dataAutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             usersData.id_cell = dataAutos.Rows[e.RowIndex].Cells[0].Value.ToString();
-                
+            usersData.Nalichie = dataAutos.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
 
         private void btnIzmenit_Click(object sender, EventArgs e)
         {
-            Form frm = new ChangePoID();
-            frm.Show();
+                Form frm = new ChangePoID();
+                frm.Show(); 
         }
 
         private void btnUdalit_Click(object sender, EventArgs e)
@@ -146,14 +146,29 @@ namespace Автосалон
 
         private void btnProdaja_Click(object sender, EventArgs e)
         {
-            Form frm = new ProdajaAuto();
-            frm.Show();
+            if (usersData.Nalichie == "В наличии" || usersData.Nalichie == "Зарезервирован")
+            {
+                Form frm = new ProdajaAuto();
+                frm.Show();
+            }
+            else if (usersData.Nalichie == "Продан")
+            {
+                MessageBox.Show("Нельзя продать этот автомобиль!");
+            }
+
         }
 
         private void btnRezerv_Click(object sender, EventArgs e)
         {
-            Form frm = new RezervAuto();
-            frm.Show();
+            if (usersData.Nalichie == "В наличии")
+            {
+                Form frm = new RezervAuto();
+                frm.Show();
+            }
+            else if (usersData.Nalichie == "Зарезервирован" || usersData.Nalichie == "Продан")
+            {
+                MessageBox.Show("Нельзя зарезервировать этот автомобиль!");
+            }
         }
     }
 }
