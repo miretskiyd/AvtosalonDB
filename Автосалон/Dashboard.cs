@@ -119,10 +119,51 @@ namespace Автосалон
         }
         private void pnlUprOnlyDirec()
         {
-            if (lblDolzh.Text == "Директор" || lblDolzh.Text == "Администратор")
+            if (lblDolzh.Text == "Директор")
+            {
                 btnDashboard.Visible = true;
-            else
+                btnAutos.Visible = true;
+                btnRezerv.Visible = true;
+                btnProdaji.Visible = true;
+                btnPostavki.Visible = true;
+                btnSotr.Visible = true;
+            }
+            else if (lblDolzh.Text == "Администратор")
+            {
+                btnDashboard.Visible = true;
+                btnAutos.Visible = true;
+                btnRezerv.Visible = true;
+                btnProdaji.Visible = true;
+                btnPostavki.Visible = false;
+                btnSotr.Visible = true;
+            }
+            else if (lblDolzh.Text == "Менеджер по продажам")
+            {
                 btnDashboard.Visible = false;
+                btnAutos.Visible = true;
+                btnRezerv.Visible = true;
+                btnProdaji.Visible = true;
+                btnPostavki.Visible = false;
+                btnSotr.Visible = false;
+            }
+            else if (lblDolzh.Text == "Кассир")
+            {
+                btnDashboard.Visible = true;
+                btnAutos.Visible = false;
+                btnRezerv.Visible = false;
+                btnProdaji.Visible = true;
+                btnPostavki.Visible = false;
+                btnSotr.Visible = false;
+            }
+            else if (lblDolzh.Text == "Логист")
+            {
+                btnDashboard.Visible = false;
+                btnAutos.Visible = true;
+                btnRezerv.Visible = false;
+                btnProdaji.Visible = false;
+                btnPostavki.Visible = true;
+                btnSotr.Visible = false;
+            }
         }
         private void timerDash_Tick(object sender, EventArgs e)
         {
@@ -156,6 +197,11 @@ namespace Автосалон
             pnlNav.Left = btnSotr.Left;
             btnPostavki.BackColor = Color.FromArgb(46, 51, 73);
             OpenChildForm(new Sotrudniki());
+        }
+
+        private void pnlWorkspace_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
