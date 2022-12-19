@@ -46,6 +46,7 @@
             this.MysqlCommand = new System.Data.SqlClient.SqlCommand();
             this.MsqlCommand2 = new System.Data.SqlClient.SqlCommand();
             this.btnExitAcc = new System.Windows.Forms.Button();
+            this.btnSotr = new System.Windows.Forms.Button();
             this.btnPostavki = new System.Windows.Forms.Button();
             this.btnProdaji = new System.Windows.Forms.Button();
             this.btnRezerv = new System.Windows.Forms.Button();
@@ -94,6 +95,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(83)))));
             this.panel2.Controls.Add(this.pnlNav);
             this.panel2.Controls.Add(this.btnExitAcc);
+            this.panel2.Controls.Add(this.btnSotr);
             this.panel2.Controls.Add(this.btnPostavki);
             this.panel2.Controls.Add(this.btnProdaji);
             this.panel2.Controls.Add(this.btnRezerv);
@@ -231,6 +233,25 @@
             this.btnExitAcc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExitAcc.UseVisualStyleBackColor = false;
             this.btnExitAcc.Click += new System.EventHandler(this.btnExitAcc_Click);
+            // 
+            // btnSotr
+            // 
+            this.btnSotr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnSotr.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSotr.FlatAppearance.BorderSize = 0;
+            this.btnSotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSotr.Font = new System.Drawing.Font("Montserrat Medium", 9.4F);
+            this.btnSotr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSotr.Image = global::Автосалон.Properties.Resources.icons8_группа_пользователей_50;
+            this.btnSotr.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSotr.Location = new System.Drawing.Point(0, 455);
+            this.btnSotr.Name = "btnSotr";
+            this.btnSotr.Size = new System.Drawing.Size(239, 71);
+            this.btnSotr.TabIndex = 4;
+            this.btnSotr.Text = "Сотрудники";
+            this.btnSotr.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSotr.UseVisualStyleBackColor = false;
+            this.btnSotr.Click += new System.EventHandler(this.btnSotr_Click);
             // 
             // btnPostavki
             // 
@@ -400,5 +421,6 @@
         private System.Windows.Forms.Label lblDolzh;
         private System.Data.SqlClient.SqlCommand MsqlCommand2;
         private System.Windows.Forms.Button btnPostavki;
+        private System.Windows.Forms.Button btnSotr;
     }
 }

@@ -69,7 +69,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(968, 155);
+            this.panel2.Size = new System.Drawing.Size(1029, 155);
             this.panel2.TabIndex = 2;
             // 
             // lblZagolovok
@@ -168,7 +168,7 @@
             this.label3.ForeColor = System.Drawing.Color.Snow;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(968, 45);
+            this.label3.Size = new System.Drawing.Size(1029, 45);
             this.label3.TabIndex = 0;
             this.label3.Text = "Зарезервированные автомобили";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -215,7 +215,7 @@
             this.dataRezerv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataRezerv.RowHeadersWidth = 51;
             this.dataRezerv.RowTemplate.Height = 24;
-            this.dataRezerv.Size = new System.Drawing.Size(968, 423);
+            this.dataRezerv.Size = new System.Drawing.Size(1029, 388);
             this.dataRezerv.TabIndex = 3;
             this.dataRezerv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRezerv_CellClick);
             // 
@@ -271,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(968, 578);
+            this.ClientSize = new System.Drawing.Size(1029, 543);
             this.Controls.Add(this.dataRezerv);
             this.Controls.Add(this.panel2);
             this.Name = "Rezerv";

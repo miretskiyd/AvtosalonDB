@@ -69,11 +69,23 @@
     <Compile Include="DobavlenieAvto.Designer.cs">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </Compile>
+    <Compile Include="DobavSotr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DobavSotr.Designer.cs">
+      <DependentUpon>DobavSotr.cs</DependentUpon>
+    </Compile>
     <Compile Include="RezDobavit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RezDobavit.Designer.cs">
       <DependentUpon>RezDobavit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы на кнопках\Sotrudniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы на кнопках\Sotrudniki.Designer.cs">
+      <DependentUpon>Sotrudniki.cs</DependentUpon>
     </Compile>
     <Compile Include="Формы на кнопках\Postavki.cs">
       <SubType>Form</SubType>
@@ -153,6 +165,9 @@
     <EmbeddedResource Include="DobavlenieAvto.resx">
       <DependentUpon>DobavlenieAvto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DobavSotr.resx">
+      <DependentUpon>DobavSotr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProdajaAuto.resx">
       <DependentUpon>ProdajaAuto.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +213,9 @@
     </Compile>
     <EmbeddedResource Include="Формы на кнопках\Rezerv.resx">
       <DependentUpon>Rezerv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы на кнопках\Sotrudniki.resx">
+      <DependentUpon>Sotrudniki.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AvtosalonDataSet.xsc">
       <DependentUpon>AvtosalonDataSet.xsd</DependentUpon>
@@ -255,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-фура-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-группа-пользователей-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -237,6 +237,7 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Год выпуска:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel3
             // 
