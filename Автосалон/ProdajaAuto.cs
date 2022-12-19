@@ -36,6 +36,7 @@ namespace Автосалон
 
         private void ProdajaAuto_Load(object sender, EventArgs e)
         {
+            txtFIOPokup.Text = usersData.Zarezerv;
             txtId.Text = usersData.id_cell;
             InsertSummaProd.Parameters["@id_auto"].Value = Convert.ToInt32(txtId.Text);
 

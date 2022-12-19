@@ -159,6 +159,9 @@
   <data name="NAutos.CommandText" xml:space="preserve">
     <value>SELECT Автомобиль.ID_Автомобиля AS ID,CONCAT(Модель.Производитель, ' ', Модель.НаименованиеМодели) AS Автомобиль, Автомобиль.Цена, Модель.Кузов, Модель.КоробкаПередач, Автомобиль.Цвет, Модель.Страна, Автомобиль.Состояние, Автомобиль.ГодВыпуска, Автомобиль.Наличие FROM     Автомобиль INNER JOIN Модель ON Автомобиль.ID_Модели = Модель.ID_Модели WHERE Наличие Like 'В наличии'</value>
   </data>
+  <metadata name="FIOrez.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>833, 60</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>149</value>
   </metadata>

@@ -148,6 +148,11 @@ namespace Автосалон
         {
             if (usersData.Nalichie == "В наличии" || usersData.Nalichie == "Зарезервирован")
             {
+                usersData.Zarezerv = "";
+                FIOrez.Parameters["@id_auto"].Value = Convert.ToInt32(usersData.id_cell);
+                MysqlConnection.Open();
+                usersData.Zarezerv = FIOrez.ExecuteScalar().ToString();
+                MysqlConnection.Close();
                 Form frm = new ProdajaAuto();
                 frm.Show();
             }

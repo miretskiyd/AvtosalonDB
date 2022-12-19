@@ -11,5 +11,6 @@ namespace Автосалон
         public static string User_Surname;
         public static string id_cell;
         public static string Nalichie;
+        public static string Zarezerv;
     }
 }

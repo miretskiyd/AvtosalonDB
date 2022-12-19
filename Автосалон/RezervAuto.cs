@@ -51,8 +51,6 @@ namespace Автосалон
             MysqlConnection.Open();
             string NomerRezerv = ID_rez.ExecuteScalar().ToString();
             string IDSotr = ID_sotr.ExecuteScalar().ToString();
-            NomerRezerv = ID_rez.ExecuteScalar().ToString();
-            IDSotr = ID_sotr.ExecuteScalar().ToString();
             RezervCom.Parameters["@id_rezerv"].Value = NomerRezerv;
             RezervCom.Parameters["@id_sotr"].Value = IDSotr;
             RezervCom.Parameters["@fio_pok"].Value = txtFIOPokup.Text;

@@ -25,5 +25,11 @@ namespace Автосалон
             dataPostavki.DataSource = temp;
             MysqlConnection.Close();
         }
+
+        private void btnDobavit_Click(object sender, EventArgs e)
+        {
+            Form frm = new RezDobavit();
+            frm.Show();
+        }
     }
 }

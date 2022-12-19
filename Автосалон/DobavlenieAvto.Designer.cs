@@ -34,6 +34,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.Label();
             this.cmbModel = new System.Windows.Forms.ComboBox();
             this.lblProizv = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.countAutos = new System.Data.SqlClient.SqlCommand();
             this.InsertAvto = new System.Data.SqlClient.SqlCommand();
             this.commandCountPost = new System.Data.SqlClient.SqlCommand();
-            this.txtId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -126,6 +126,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 62);
             this.panel2.TabIndex = 2;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtId.Location = new System.Drawing.Point(624, 0);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(93, 36);
+            this.txtId.TabIndex = 4;
+            this.txtId.Text = "id";
+            this.txtId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmbModel
             // 
@@ -362,17 +373,6 @@
             // 
             this.commandCountPost.CommandText = "SELECT DISTINCT ID_Поставки From Поставка";
             this.commandCountPost.Connection = this.MysqlConnection;
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtId.Location = new System.Drawing.Point(624, 0);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(93, 36);
-            this.txtId.TabIndex = 4;
-            this.txtId.Text = "id";
-            this.txtId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DobavlenieAvto
             // 
