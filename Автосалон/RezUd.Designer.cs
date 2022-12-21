@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RezUd));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.btnNo = new System.Windows.Forms.Button();
             this.btnYes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnlIconteslatopleft = new System.Windows.Forms.Panel();
             this.MysqlConnection = new System.Data.SqlClient.SqlConnection();
             this.RezUdCom = new System.Data.SqlClient.SqlCommand();
             this.panel1.SuspendLayout();
@@ -51,6 +51,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 35);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnExit
@@ -68,6 +69,16 @@
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pnlIconteslatopleft
+            // 
+            this.pnlIconteslatopleft.BackgroundImage = global::Автосалон.Properties.Resources.icons8_tesla_model_x_100;
+            this.pnlIconteslatopleft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlIconteslatopleft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlIconteslatopleft.Location = new System.Drawing.Point(0, 0);
+            this.pnlIconteslatopleft.Name = "pnlIconteslatopleft";
+            this.pnlIconteslatopleft.Size = new System.Drawing.Size(30, 35);
+            this.pnlIconteslatopleft.TabIndex = 1;
             // 
             // btnNo
             // 
@@ -120,16 +131,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Вы уверены, что хотите удалить резервирование?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlIconteslatopleft
-            // 
-            this.pnlIconteslatopleft.BackgroundImage = global::Автосалон.Properties.Resources.icons8_tesla_model_x_100;
-            this.pnlIconteslatopleft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlIconteslatopleft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlIconteslatopleft.Location = new System.Drawing.Point(0, 0);
-            this.pnlIconteslatopleft.Name = "pnlIconteslatopleft";
-            this.pnlIconteslatopleft.Size = new System.Drawing.Size(30, 35);
-            this.pnlIconteslatopleft.TabIndex = 1;
             // 
             // MysqlConnection
             // 

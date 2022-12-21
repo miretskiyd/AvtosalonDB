@@ -31,5 +31,21 @@ namespace Автосалон
             Form frm = new RezDobavit();
             frm.Show();
         }
+
+        private void btnSostav_Click(object sender, EventArgs e)
+        {
+            Form frm = new SostavPost();
+            frm.Show();
+        }
+
+        private void dataPostavki_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            usersData.id_cell = dataPostavki.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void dataPostavki_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

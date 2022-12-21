@@ -81,6 +81,12 @@
     <Compile Include="RezDobavit.Designer.cs">
       <DependentUpon>RezDobavit.cs</DependentUpon>
     </Compile>
+    <Compile Include="SostavPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SostavPost.Designer.cs">
+      <DependentUpon>SostavPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Формы на кнопках\Sotrudniki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RezUd.resx">
       <DependentUpon>RezUd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SostavPost.resx">
+      <DependentUpon>SostavPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UdalProd.resx">
       <DependentUpon>UdalProd.cs</DependentUpon>

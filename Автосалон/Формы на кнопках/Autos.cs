@@ -175,5 +175,10 @@ namespace Автосалон
                 MessageBox.Show("Нельзя зарезервировать этот автомобиль!");
             }
         }
+
+        private void dataAutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Автосалон
 {
-    public partial class RezUd : Form
+    public partial class SostavPost : Form
     {
-        public RezUd()
+        public SostavPost()
         {
             InitializeComponent();
         }
@@ -26,28 +26,23 @@ namespace Автосалон
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void btnNo_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnYes_Click(object sender, EventArgs e)
+        private void SostavPost_Load(object sender, EventArgs e)
         {
-            RezUdCom.Parameters["@id_auto"].Value = Convert.ToInt32(usersData.id_cell);
+            lblid.Text = usersData.id_cell;
+            SostavCom.Parameters["@id_post"].Value = Convert.ToInt32(lblid.Text);
+            CountAuto.Parameters["@id_post"].Value = Convert.ToInt32(lblid.Text);
             MysqlConnection.Open();
-            RezUdCom.ExecuteNonQuery();
+            var temp = new DataTable();
+            temp.Load(SostavCom.ExecuteReader());
+            txtKolvo.Text = CountAuto.ExecuteScalar().ToString();
+            dataSostPostavki.DataSource = temp;
+
             MysqlConnection.Close();
-            this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

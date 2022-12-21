@@ -154,9 +154,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(440, 112);
+            this.label1.Location = new System.Drawing.Point(429, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 10;
             this.label1.Text = "Количество";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;

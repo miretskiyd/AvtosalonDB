@@ -372,7 +372,7 @@
             // 
             // commandCountPost
             // 
-            this.commandCountPost.CommandText = "SELECT DISTINCT ID_Поставки From Поставка";
+            this.commandCountPost.CommandText = resources.GetString("commandCountPost.CommandText");
             this.commandCountPost.Connection = this.MysqlConnection;
             // 
             // DobavlenieAvto
