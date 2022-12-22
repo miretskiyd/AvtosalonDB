@@ -52,6 +52,7 @@
             this.FiltrTsena = new System.Data.SqlClient.SqlCommand();
             this.FiltrTsenaProizv = new System.Data.SqlClient.SqlCommand();
             this.NalichieCom = new System.Data.SqlClient.SqlCommand();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProdaji)).BeginInit();
@@ -72,15 +73,16 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtTsena);
             this.panel1.Controls.Add(this.lblZagolovok);
             this.panel1.Controls.Add(this.btnExecute);
             this.panel1.Controls.Add(this.cmbBoxListProizv);
             this.panel1.Controls.Add(this.lblKuzov);
             this.panel1.Controls.Add(this.lvlMarka);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnUdalit);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -268,6 +270,13 @@
             new System.Data.SqlClient.SqlParameter("@proizv", System.Data.SqlDbType.VarChar, 1024),
             new System.Data.SqlClient.SqlParameter("@tsena", System.Data.SqlDbType.Int)});
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(620, 33);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(409, 122);
+            this.panel3.TabIndex = 2;
+            // 
             // Prodaji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,5 +317,6 @@
         private System.Data.SqlClient.SqlCommand FiltrTsena;
         private System.Data.SqlClient.SqlCommand FiltrTsenaProizv;
         private System.Data.SqlClient.SqlCommand NalichieCom;
+        private System.Windows.Forms.Panel panel3;
     }
 }
